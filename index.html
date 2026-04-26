@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ghanem Lamloumi portfolio - Fullstack Developer and Ethical Hacker" />
+  <title>Ghanem Lamloumi | Fullstack Developer & Ethical Hacker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-mode="dev" data-theme="dark">
+  <div class="noise"></div>
+  <div class="orb orb-one"></div>
+  <div class="orb orb-two"></div>
+
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#top" aria-label="Go to homepage">
+        <img src="assets/GL_logo.png" alt="Ghanem Lamloumi logo" class="brand-logo" />
+      </a>
+
+      <div class="nav-links" aria-label="Main navigation">
+        <a href="#projects" data-i18n="navProjects">Projects</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#terminal" data-i18n="navTerminal">Terminal</a>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <button class="chip-button" id="langToggle" type="button">SV</button>
+        <button class="chip-button" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
+        <button class="mode-toggle" id="modeToggle" type="button" data-i18n="devMode">Dev Mode</button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero section-shell">
+      <div class="hero-copy reveal">
+        <div class="eyebrow" data-i18n="eyebrow">Developer with a security mindset</div>
+        <h1 data-i18n="heroTitle">Fullstack Developer & Ethical Hacker</h1>
+        <p class="hero-text" data-i18n="heroText">
+          I build practical web and mobile applications, while also learning how systems break, how to secure them, and how to communicate findings clearly.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="primary-action" data-i18n="viewProjects">View Projects</a>
+          <a href="https://github.com/Ghanemla" target="_blank" rel="noopener noreferrer" class="secondary-action">GitHub →</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal" aria-label="Profile summary">
+        <div class="status-line"><span></span><strong data-i18n="available">Open to fullstack and junior security roles</strong></div>
+        <div class="hero-stats">
+          <div><strong>Fullstack</strong><span>React / Next / Node</span></div>
+          <div><strong>Security</strong><span>Linux / DNS / HTB</span></div>
+          <div><strong>Automation</strong><span>Python / APIs / Bots</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="about" class="section-shell about-section reveal">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow" data-i18n="aboutEyebrow">About me</p>
+          <h2 data-i18n="aboutTitle">Fullstack developer with an IT security foundation</h2>
+          <p data-i18n="aboutIntro">I am Ghanem Lamloumi, educated as both a fullstack web developer and IT security technician. I like working across different parts of IT: building applications, improving user experience, structuring content, and learning how systems can be secured.</p>
+        </div>
+      </div>
+
+      <div class="about-grid">
+        <article class="about-card">
+          <span class="about-icon">🧩</span>
+          <h3 data-i18n="aboutDevTitle">Development background</h3>
+          <p data-i18n="aboutDevText">Through my fullstack studies and LIA, I have worked with React Native, Expo, SQLite, WordPress themes and Elementor. I am strongest in JavaScript and TypeScript and continue building projects with modern web and mobile tools.</p>
+        </article>
+
+        <article class="about-card">
+          <span class="about-icon">🛡️</span>
+          <h3 data-i18n="aboutSecTitle">Security mindset</h3>
+          <p data-i18n="aboutSecText">My IT security training gave me a base in Linux, DNS, Packet Tracer and Docker. I also keep my knowledge fresh through Hack The Box Academy and IT-related courses.</p>
+        </article>
+
+        <article class="about-card">
+          <span class="about-icon">🎯</span>
+          <h3 data-i18n="aboutWorkTitle">How I work</h3>
+          <p data-i18n="aboutWorkText">I am structured, self-driven and detail-oriented, but flexible enough to work independently or in a team. I enjoy varied tasks and like turning broad technical knowledge into practical results.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section-shell skills-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow" data-i18n="skillEyebrow">Capability map</p>
+        <h2 data-i18n="skillsTitle">Skills that support both career paths</h2>
+      </div>
+      <div class="skill-grid" id="skillGrid"></div>
+    </section>
+
+    <section id="projects" class="section-shell reveal">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow" data-i18n="projectEyebrow">Selected work</p>
+          <h2 data-i18n="projectsTitle">Projects built around development, security and automation</h2>
+        </div>
+        <div class="filters" id="filters">
+          <button class="filter-button active" data-filter="all" type="button" data-i18n="filterAll">All</button>
+          <button class="filter-button" data-filter="fullstack" type="button" data-i18n="roleFullstack">Fullstack</button>
+          <button class="filter-button" data-filter="security" type="button" data-i18n="roleSecurity">Security</button>
+        </div>
+      </div>
+
+      <div class="featured-wrap" id="featuredWrap">
+        <div class="mini-heading">
+          <span data-i18n="featuredTitle">Featured projects</span>
+          <small data-i18n="featuredNote">Best proof pieces for recruiters</small>
+        </div>
+        <div class="featured-grid" id="featuredGrid"></div>
+      </div>
+
+      <div class="mini-heading">
+        <span data-i18n="allProjectsTitle">All projects</span>
+        <small data-i18n="allProjectsNote">Filter by role focus</small>
+      </div>
+      <div class="projects-grid" id="projectsGrid"></div>
+    </section>
+
+    <section id="terminal" class="section-shell terminal-section reveal">
+      <div class="section-heading">
+        <p class="eyebrow">/ interactive</p>
+        <h2 data-i18n="terminalTitle">Portfolio terminal</h2>
+        <p data-i18n="terminalIntro">Try commands like help, projects, skills, contact, security or fullstack.</p>
+      </div>
+      <div class="terminal-card">
+        <div class="terminal-top"><span></span><span></span><span></span><strong>ghanem@portfolio:~</strong></div>
+        <div id="terminalOutput" class="terminal-output" aria-live="polite"></div>
+        <label class="terminal-input-row">
+          <span>$</span>
+          <input id="terminalInput" autocomplete="off" placeholder="type 'help' and press Enter" />
+        </label>
+      </div>
+    </section>
+
+
+
+    <section id="contact" class="section-shell contact-section reveal">
+      <div>
+        <p class="eyebrow" data-i18n="contactEyebrow">Next step</p>
+        <h2 data-i18n="contactTitle">Let’s build secure, useful software.</h2>
+        <p data-i18n="contactText">I am open to fullstack developer, junior ethical hacker, junior pentester and IT security technician opportunities.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="primary-action" href="mailto:Ghanem.lamloumi1@gmail.com">Email</a>
+        <a class="secondary-action" href="https://github.com/Ghanemla" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      </div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
