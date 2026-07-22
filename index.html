@@ -1,161 +1,316 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv" data-lang="sv" data-theme="dark">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Ghanem Lamloumi portfolio - Fullstack Developer and Ethical Hacker" />
-  <title>Ghanem Lamloumi | Fullstack Developer & Ethical Hacker</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Ghanem Lamloumi — Full-Stack Developer &amp; IT Security Technician">Ghanem Lamloumi — Fullstackutvecklare &amp; IT-säkerhetstekniker</title>
+<meta name="description"
+      content="Ghanem Lamloumi — fullstackutvecklare och IT-säkerhetstekniker i Sverige. Två yrkeshögskoleexamina, självständiga produkter byggda hela vägen och handledd säkerhetsutbildning."
+      data-en="Ghanem Lamloumi — full-stack developer and IT security technician in Sweden. Two Higher Vocational Education diplomas, independent products built end to end, and supervised security training.">
+<link rel="canonical" href="https://ghanemla.github.io/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Ghanem Lamloumi">
+<meta property="og:url" content="https://ghanemla.github.io/">
+<meta property="og:title" content="Ghanem Lamloumi — Fullstackutvecklare &amp; IT-säkerhetstekniker">
+<meta property="og:description" content="Jag bygger fullstackapplikationer — och är utbildad att hitta och åtgärda det som gör mjukvara sårbar.">
+<meta property="og:image" content="https://ghanemla.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ghanem Lamloumi — Fullstackutvecklare &amp; IT-säkerhetstekniker">
+<meta name="twitter:description" content="Jag bygger fullstackapplikationer — och är utbildad att hitta och åtgärda det som gör mjukvara sårbar.">
+<meta name="twitter:image" content="https://ghanemla.github.io/assets/og-image.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/GL_logo.png">
+
+<script>
+/* Apply the saved theme and language before first paint — no flash. */
+(function () {
+  var el = document.documentElement;
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    el.setAttribute('data-theme', (savedTheme === 'light' || savedTheme === 'dark')
+      ? savedTheme
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+  } catch (e) {
+    el.setAttribute('data-theme', 'dark');
+  }
+  try {
+    var savedLang = localStorage.getItem('lang');
+    if (savedLang === 'en' || savedLang === 'sv') {
+      el.setAttribute('data-lang', savedLang);
+      el.setAttribute('lang', savedLang);
+    }
+  } catch (e) { /* Swedish stays the default */ }
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
 </head>
-<body data-mode="dev" data-theme="dark">
-  <div class="noise"></div>
-  <div class="orb orb-one"></div>
-  <div class="orb orb-two"></div>
+<body>
+<a class="skip-link" href="#main"><span lang="sv">Hoppa till innehåll</span><span lang="en">Skip to content</span></a>
 
-  <header class="site-header">
-    <nav class="navbar">
-      <a class="brand" href="#top" aria-label="Go to homepage">
-        <img src="assets/GL_logo.png" alt="Ghanem Lamloumi logo" class="brand-logo" />
-      </a>
+<header class="site-header">
+  <nav class="container nav" aria-label="Huvudmeny" data-aria-en="Main">
+    <a class="nav__brand" href="/">Ghanem Lamloumi</a>
 
-      <div class="nav-links" aria-label="Main navigation">
-        <a href="#about" data-i18n="navAbout">About</a>
-        <a href="#skills" data-i18n="navSkills">Skills</a>
-        <a href="#projects" data-i18n="navProjects">Projects</a>
-        <a href="#terminal" data-i18n="navTerminal">Terminal</a>
-        <a href="#contact" data-i18n="navContact">Contact</a>
-      </div>
+    <div class="nav__group">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="/development/"><span lang="sv">Utveckling</span><span lang="en">Development</span></a></li>
+        <li><a class="nav__link" href="/cybersecurity/"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a></li>
+        <li><a class="nav__link" href="#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a></li>
+        <li><a class="nav__link" href="#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a></li>
+      </ul>
 
-      <div class="nav-actions">
-        <button class="chip-button" id="langToggle" type="button">SV</button>
-        <button class="chip-button" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
-        <button class="mode-toggle" id="modeToggle" type="button" data-i18n="devMode">Dev Mode</button>
-      </div>
-    </nav>
-  </header>
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Byt till engelska">
+        <span class="lang-toggle__opt lang-toggle__opt--sv" aria-hidden="true">SV</span>
+        <span class="lang-toggle__opt lang-toggle__opt--en" aria-hidden="true">EN</span>
+      </button>
 
-  <main id="top">
-    <section class="hero section-shell">
-      <div class="hero-copy reveal">
-        <div class="eyebrow" data-i18n="eyebrow">Developer with a security mindset</div>
-        <h1 data-i18n="heroTitle">Fullstack Developer & Ethical Hacker</h1>
-        <p class="hero-text" data-i18n="heroText">
-          I build practical web and mobile applications, while also learning how systems break, how to secure them, and how to communicate findings clearly.
-        </p>
-        <div class="hero-actions">
-          <a href="#projects" class="primary-action" data-i18n="viewProjects">View Projects</a>
-          <a href="https://github.com/Ghanemla" target="_blank" rel="noopener noreferrer" class="secondary-action">GitHub →</a>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="visually-hidden"><span lang="sv">Ljust tema</span><span lang="en">Light theme</span></span>
+        <span class="theme-toggle__opt theme-toggle__opt--dark" aria-hidden="true">☾</span>
+        <span class="theme-toggle__opt theme-toggle__opt--light" aria-hidden="true">☀</span>
+      </button>
+
+      <div class="menu menu--desktop">
+        <button class="menu__button" type="button" data-menu-button aria-expanded="false" aria-controls="cv-menu">
+          CV <span class="menu__caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="menu__list" id="cv-menu" data-menu-panel hidden>
+          <p class="menu__group"><span lang="sv">Utvecklare</span><span lang="en">Developer</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+          <p class="menu__group"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
         </div>
       </div>
 
-      <aside class="hero-panel reveal" aria-label="Profile summary">
-        <div class="status-line"><span></span><strong data-i18n="available">Open to fullstack and junior security roles</strong></div>
-        <div class="hero-stats">
-          <div><strong>Fullstack</strong><span>React / Next / Node</span></div>
-          <div><strong>Security</strong><span>Linux / DNS / HTB</span></div>
-          <div><strong>Automation</strong><span>Python / APIs / Bots</span></div>
-        </div>
-      </aside>
-    </section>
+      <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+        <span class="visually-hidden"><span lang="sv">Meny</span><span lang="en">Menu</span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
 
-    <section id="about" class="section-shell about-section reveal">
-      <div class="section-heading split-heading">
+  <div class="container nav__mobile" id="mobile-nav" data-nav-panel hidden>
+    <a href="/development/"><span lang="sv">Utveckling</span><span lang="en">Development</span></a>
+    <a href="/cybersecurity/"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a>
+    <a href="#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a>
+    <a href="#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a>
+    <span class="nav__mobile-label">CV</span>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ---------------- Hero ---------------- -->
+  <section class="container hero">
+    <div>
+      <p class="hero__kicker"><span lang="sv">Fullstackutvecklare &amp; IT-säkerhetstekniker — Sverige</span><span lang="en">Full-stack developer &amp; IT security technician — Sweden</span></p>
+
+      <div class="portrait__mobile">
+        <img src="/assets/Ghanem.jpg" alt="Porträtt av Ghanem Lamloumi" data-alt-en="Portrait of Ghanem Lamloumi" width="76" height="76">
         <div>
-          <p class="eyebrow" data-i18n="aboutEyebrow">About me</p>
-          <h2 data-i18n="aboutTitle">Fullstack developer with an IT security foundation</h2>
-          <p data-i18n="aboutIntro">I am Ghanem Lamloumi, educated as both a fullstack web developer and IT security technician. I like working across different parts of IT: building applications, improving user experience, structuring content, and learning how systems can be secured.</p>
+          <p class="hero__kicker"><span lang="sv">Fullstackutvecklare &amp;<br>IT-säkerhetstekniker</span><span lang="en">Full-stack developer &amp;<br>IT security technician</span></p>
+          <p class="availability"><span lang="sv">Tillgänglig · Sverige</span><span lang="en">Available · Sweden</span></p>
         </div>
       </div>
 
-      <div class="about-grid">
-        <article class="about-card">
-          <span class="about-icon">🧩</span>
-          <h3 data-i18n="aboutDevTitle">Development background</h3>
-          <p data-i18n="aboutDevText">Through my fullstack studies and LIA, I have worked with React Native, Expo, SQLite, WordPress themes and Elementor. I am strongest in JavaScript and TypeScript and continue building projects with modern web and mobile tools.</p>
-        </article>
+      <h1 class="hero__title"><span lang="sv">Jag bygger fullstackapplikationer — och är utbildad att hitta och åtgärda det som gör mjukvara sårbar.</span><span lang="en">I build full-stack applications — and I&#8217;m trained to find and fix what makes software vulnerable.</span></h1>
+      <p class="hero__support"><span lang="sv">Två yrkeshögskoleexamina: Fullstack webbutvecklare (Chas Academy, 2024) och IT-säkerhetstekniker — Etisk hackare (Edugrade, 2021).</span><span lang="en">Two Higher Vocational Education diplomas: Full-Stack Web Developer (Chas Academy, 2024) and IT Security Technician — Ethical Hacker (Edugrade, 2021).</span></p>
 
-        <article class="about-card">
-          <span class="about-icon">🛡️</span>
-          <h3 data-i18n="aboutSecTitle">Security mindset</h3>
-          <p data-i18n="aboutSecText">My IT security training gave me a base in Linux, DNS, Packet Tracer and Docker. I also keep my knowledge fresh through Hack The Box Academy and IT-related courses.</p>
-        </article>
-
-        <article class="about-card">
-          <span class="about-icon">🎯</span>
-          <h3 data-i18n="aboutWorkTitle">How I work</h3>
-          <p data-i18n="aboutWorkText">I am structured, self-driven and detail-oriented, but flexible enough to work independently or in a team. I enjoy varied tasks and like turning broad technical knowledge into practical results.</p>
-        </article>
+      <div class="hero__actions">
+        <a class="btn btn--dev" href="/development/"><span lang="sv">Visa utvecklingsprofil →</span><span lang="en">View development profile →</span></a>
+        <a class="btn btn--sec" href="/cybersecurity/"><span lang="sv">Visa cybersäkerhetsprofil →</span><span lang="en">View cybersecurity profile →</span></a>
       </div>
-    </section>
 
-    <section id="skills" class="section-shell skills-section reveal">
-      <div class="section-heading">
-        <p class="eyebrow" data-i18n="skillEyebrow">Capability map</p>
-        <h2 data-i18n="skillsTitle">Skills that support both career paths</h2>
+      <div class="hero__inline">
+        <span class="availability"><span lang="sv">Tillgänglig omgående för juniora roller</span><span lang="en">Available immediately for junior roles</span></span>
+        <a class="link" href="mailto:ghanem.lamloumi1@gmail.com"><span lang="sv">E-post</span><span lang="en">Email</span></a>
+        <a class="link" href="https://github.com/Ghanemla" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="link" href="https://www.linkedin.com/in/ghanem-lamloumi" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-      <div class="skill-grid" id="skillGrid"></div>
-    </section>
+    </div>
 
-    <section id="projects" class="section-shell reveal">
-      <div class="section-heading split-heading">
+    <div class="portrait">
+      <img class="portrait__img" src="/assets/Ghanem.jpg" alt="Porträtt av Ghanem Lamloumi" data-alt-en="Portrait of Ghanem Lamloumi" width="300" height="340">
+      <p class="portrait__caption">Ghanem Lamloumi · <span lang="sv">Sverige</span><span lang="en">Sweden</span></p>
+    </div>
+  </section>
+
+  <!-- ---------------- Pathways ---------------- -->
+  <section class="container pathways" aria-label="Karriärvägar" data-aria-en="Career pathways">
+    <article class="card pathway path-dev">
+      <div class="pathway__head">
+        <h2 class="label label--dev"><span lang="sv">01 / Mjukvaruutveckling</span><span lang="en">01 / Software development</span></h2>
+        <span class="pathway__meta"><span lang="sv">EXAMEN 2024 · 420 YH</span><span lang="en">DIPLOMA 2024 · 420 YH</span></span>
+      </div>
+      <h3 class="pathway__title"><span lang="sv">Fullstackutveckling</span><span lang="en">Full-stack development</span></h3>
+      <p class="pathway__body"><span lang="sv">React, TypeScript, Next.js, Node.js och PHP. Självständiga produkter byggda hela vägen, och sex månader på plats med ett seniort team.</span><span lang="en">React, TypeScript, Next.js, Node.js and PHP. Independent products built end to end, and six months on-site with a senior team.</span></p>
+      <div class="chips">
+        <span class="chip">React</span>
+        <span class="chip">TypeScript</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">PHP</span>
+        <span class="chip">React Native</span>
+      </div>
+      <a class="link--accent" href="/development/"><span lang="sv">Projekt, LIA &amp; utvecklar-CV →</span><span lang="en">Projects, internship &amp; developer CV →</span></a>
+    </article>
+
+    <article class="card pathway path-sec">
+      <div class="pathway__head">
+        <h2 class="label label--sec"><span lang="sv">02 / Cybersäkerhet</span><span lang="en">02 / Cybersecurity</span></h2>
+        <span class="pathway__meta"><span lang="sv">EXAMEN 2021 · 440 YH</span><span lang="en">DIPLOMA 2021 · 440 YH</span></span>
+      </div>
+      <h3 class="pathway__title"><span lang="sv">IT-säkerhet</span><span lang="en">IT security</span></h3>
+      <p class="pathway__body"><span lang="sv">Sårbarhetsanalys, metodik för penetrationstestning, nätverk och Linux-härdning — med två handledda LIA-perioder och dokumenterat labbarbete.</span><span lang="en">Vulnerability analysis, penetration-testing methodology, networking and Linux hardening — with two supervised internships and documented lab work.</span></p>
+      <div class="chips">
+        <span class="chip">Nmap</span>
+        <span class="chip">Burp Suite</span>
+        <span class="chip">Wireshark</span>
+        <span class="chip"><span lang="sv">Linux-härdning</span><span lang="en">Linux hardening</span></span>
+        <span class="chip">TCP/IP</span>
+      </div>
+      <a class="link--accent" href="/cybersecurity/"><span lang="sv">Utbildning, labbar &amp; säkerhets-CV →</span><span lang="en">Training, labs &amp; security CV →</span></a>
+    </article>
+  </section>
+
+  <!-- ---------------- Selected work ---------------- -->
+  <section class="container section--bottom" aria-labelledby="selected-work">
+    <div class="section-head">
+      <h2 class="label" id="selected-work"><span lang="sv">Utvalt arbete</span><span lang="en">Selected work</span></h2>
+      <a class="link link--quiet" href="/development/"><span lang="sv">Alla projekt →</span><span lang="en">All projects →</span></a>
+    </div>
+
+    <div class="work-grid">
+      <article class="card work-card path-dev">
+        <div class="cover cover--sm">
+          <span class="cover__name">Nebula</span>
+          <span class="cover__rule"></span>
+          <span class="cover__meta"><span lang="sv">Skrivbordsapp · Electron</span><span lang="en">Desktop app · Electron</span></span>
+        </div>
+        <div class="work-card__body">
+          <div class="work-card__head">
+            <h3 class="work-card__title">Nebula</h3>
+            <span class="badge badge--dev"><span lang="sv">Självständigt</span><span lang="en">Independent</span></span>
+          </div>
+          <p class="work-card__desc"><span lang="sv">Local-first markdown-anteckningar med 3D-grafvy och rösttranskribering på enheten.</span><span lang="en">Local-first markdown notes with a 3D graph view and on-device voice transcription.</span></p>
+        </div>
+      </article>
+
+      <article class="card work-card path-dev">
+        <div class="cover cover--sm">
+          <span class="cover__name">Vanta</span>
+          <span class="cover__rule"></span>
+          <span class="cover__meta"><span lang="sv">Skrivbordsapp · Tauri · FastAPI</span><span lang="en">Desktop app · Tauri · FastAPI</span></span>
+        </div>
+        <div class="work-card__body">
+          <div class="work-card__head">
+            <h3 class="work-card__title">Vanta</h3>
+            <span class="badge badge--dev"><span lang="sv">Självständigt</span><span lang="en">Independent</span></span>
+          </div>
+          <p class="work-card__desc"><span lang="sv">Lokal AI-bildstudio för skrivbordet — Tauri-renderare över en typad FastAPI-orkestrator.</span><span lang="en">Local-only AI-image desktop studio — Tauri renderer over a typed FastAPI orchestrator.</span></p>
+        </div>
+      </article>
+
+      <article class="card work-card path-sec">
+        <div class="cover cover--sm cover--diagram">
+          <span class="cover__box"><span lang="sv">UFW · SSH-nycklar · Fail2Ban</span><span lang="en">UFW · SSH keys · Fail2Ban</span></span>
+          <span class="cover__arrow" aria-hidden="true">↓</span>
+          <span class="cover__box">Apache · PHP · MariaDB · HTTPS</span>
+          <span class="cover__arrow" aria-hidden="true">↓</span>
+          <span class="cover__box"><span lang="sv">SFTP · chroot · minsta privilegium</span><span lang="en">SFTP · chroot · least privilege</span></span>
+        </div>
+        <div class="work-card__body">
+          <div class="work-card__head">
+            <h3 class="work-card__title"><span lang="sv">Härdad server</span><span lang="en">Hardened server</span></h3>
+            <span class="badge badge--sec"><span lang="sv">Teamprojekt</span><span lang="en">Team project</span></span>
+          </div>
+          <p class="work-card__desc"><span lang="sv">Fallstudie i Debian-härdning: PAM, UFW, SSH-nycklar, Fail2Ban, chroot, HTTPS.</span><span lang="en">Debian hardening case study: PAM, UFW, SSH keys, Fail2Ban, chroot, HTTPS.</span></p>
+        </div>
+      </article>
+    </div>
+
+    <div class="work-list">
+      <div class="work-list__row">
         <div>
-          <p class="eyebrow" data-i18n="projectEyebrow">Selected work</p>
-          <h2 data-i18n="projectsTitle">Projects built around development, security and automation</h2>
+          <p class="work-list__title">Nebula</p>
+          <p class="work-list__desc"><span lang="sv">Local-first anteckningar · 3D-graf · Electron</span><span lang="en">Local-first notes · 3D graph · Electron</span></p>
         </div>
-        <div class="filters" id="filters">
-          <button class="filter-button active" data-filter="all" type="button" data-i18n="filterAll">All</button>
-          <button class="filter-button" data-filter="fullstack" type="button" data-i18n="roleFullstack">Fullstack</button>
-          <button class="filter-button" data-filter="security" type="button" data-i18n="roleSecurity">Security</button>
+        <span class="badge badge--dev"><span lang="sv">Självständigt</span><span lang="en">Independent</span></span>
+      </div>
+      <div class="work-list__row">
+        <div>
+          <p class="work-list__title">Vanta</p>
+          <p class="work-list__desc"><span lang="sv">Lokal AI-studio · Tauri · FastAPI</span><span lang="en">Local AI studio · Tauri · FastAPI</span></p>
         </div>
+        <span class="badge badge--dev"><span lang="sv">Självständigt</span><span lang="en">Independent</span></span>
       </div>
-
-      <div class="featured-wrap" id="featuredWrap">
-        <div class="mini-heading">
-          <span data-i18n="featuredTitle">Featured projects</span>
-          <small data-i18n="featuredNote">Best proof pieces for recruiters</small>
+      <div class="work-list__row">
+        <div>
+          <p class="work-list__title"><span lang="sv">Härdad server</span><span lang="en">Hardened server</span></p>
+          <p class="work-list__desc">Debian · PAM · UFW · Fail2Ban</p>
         </div>
-        <div class="featured-grid" id="featuredGrid"></div>
+        <span class="badge badge--sec">Team</span>
       </div>
+    </div>
+  </section>
 
-      <div class="mini-heading">
-        <span data-i18n="allProjectsTitle">All projects</span>
-        <small data-i18n="allProjectsNote">Filter by role focus</small>
-      </div>
-      <div class="projects-grid" id="projectsGrid"></div>
-    </section>
+  <!-- ---------------- Education ---------------- -->
+  <section class="container education" id="education" aria-labelledby="education-heading">
+    <h2 class="visually-hidden" id="education-heading"><span lang="sv">Utbildning</span><span lang="en">Education</span></h2>
 
-    <section id="terminal" class="section-shell terminal-section reveal">
-      <div class="section-heading">
-        <p class="eyebrow">/ interactive</p>
-        <h2 data-i18n="terminalTitle">Portfolio terminal</h2>
-        <p data-i18n="terminalIntro">Try commands like help, projects, skills, contact, security or fullstack.</p>
-      </div>
-      <div class="terminal-card">
-        <div class="terminal-top"><span></span><span></span><span></span><strong>ghanem@portfolio:~</strong></div>
-        <div id="terminalOutput" class="terminal-output" aria-live="polite"></div>
-        <label class="terminal-input-row">
-          <span>$</span>
-          <input id="terminalInput" autocomplete="off" placeholder="type 'help' and press Enter" />
-        </label>
-      </div>
-    </section>
+    <div class="education__item">
+      <p class="meta"><span lang="sv">Utbildning · Chas Academy · 2022–2024</span><span lang="en">Education · Chas Academy · 2022–2024</span></p>
+      <strong class="education__title"><span lang="sv">Fullstack webbutvecklare — Yrkeshögskoleexamen, 420 YH-poäng</span><span lang="en">Full-Stack Web Developer — HVE Diploma, 420 YH</span></strong>
+      <span class="education__detail"><span lang="sv">JavaScript, backend, UX, projektmetodik · 120 YH-poäng LIA</span><span lang="en">JavaScript, backend, UX, project methodology · 120 YH internship</span></span>
+    </div>
 
+    <div class="education__item">
+      <p class="meta"><span lang="sv">Utbildning · Edugrade · 2019–2021</span><span lang="en">Education · Edugrade · 2019–2021</span></p>
+      <strong class="education__title"><span lang="sv">IT-säkerhetstekniker — Etisk hackare — Yrkeshögskoleexamen, 440 YH-poäng</span><span lang="en">IT Security Technician — Ethical Hacker — HVE Diploma, 440 YH</span></strong>
+      <span class="education__detail"><span lang="sv">Etisk hacking, nätverkssäkerhet, härdning, Python · två LIA-perioder</span><span lang="en">Ethical hacking, network security, hardening, Python · two internships</span></span>
+    </div>
+  </section>
 
-
-    <section id="contact" class="section-shell contact-section reveal">
+  <!-- ---------------- Contact ---------------- -->
+  <section class="container" id="contact" aria-labelledby="contact-heading">
+    <div class="card contact-panel">
       <div>
-        <p class="eyebrow" data-i18n="contactEyebrow">Next step</p>
-        <h2 data-i18n="contactTitle">Let’s build secure, useful software.</h2>
-        <p data-i18n="contactText">I am open to fullstack developer, junior ethical hacker, junior pentester and IT security technician opportunities.</p>
+        <h2 class="contact-panel__title" id="contact-heading"><span lang="sv">Kontakta mig</span><span lang="en">Get in touch</span></h2>
+        <p class="contact-panel__sub"><span lang="sv">Juniora roller inom utveckling eller säkerhet · Sverige · distansvänligt · relocation möjlig</span><span lang="en">Junior development or security roles · Sweden · remote-friendly · relocation possible</span></p>
       </div>
-      <div class="contact-actions">
-        <a class="primary-action" href="mailto:Ghanem.lamloumi1@gmail.com">Email</a>
-        <a class="secondary-action" href="https://github.com/Ghanemla" target="_blank" rel="noopener noreferrer">GitHub →</a>
+      <div class="contact-panel__actions">
+        <a class="btn btn--neutral" href="mailto:ghanem.lamloumi1@gmail.com">ghanem.lamloumi1@gmail.com</a>
+        <a class="btn btn--outline" href="https://github.com/Ghanemla" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn btn--outline" href="https://www.linkedin.com/in/ghanem-lamloumi" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <script src="data.js"></script>
-  <script src="script.js"></script>
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 Ghanem Lamloumi</span>
+    <span><span lang="sv">Utveckling · Cybersäkerhet · CV</span><span lang="en">Development · Cybersecurity · CV</span></span>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
 </body>
 </html>

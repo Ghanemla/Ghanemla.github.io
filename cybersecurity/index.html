@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="sv" data-lang="sv" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Cybersecurity — Ghanem Lamloumi, IT Security Technician">Cybersäkerhet — Ghanem Lamloumi, IT-säkerhetstekniker</title>
+<meta name="description"
+      content="IT-säkerhetstekniker i Sverige: yrkeshögskoleexamen på 440 YH-poäng inom etisk hacking, sårbarhetsanalys, nätverkssäkerhet och systemhärdning — tillämpat under handledd LIA och i kontrollerade labbmiljöer."
+      data-en="IT Security Technician in Sweden: a 440 YH Higher Vocational Education diploma in ethical hacking, vulnerability analysis, network security and system hardening, practised in supervised internships and controlled labs.">
+<link rel="canonical" href="https://ghanemla.github.io/cybersecurity/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Ghanem Lamloumi">
+<meta property="og:url" content="https://ghanemla.github.io/cybersecurity/">
+<meta property="og:title" content="Cybersäkerhet — Ghanem Lamloumi, IT-säkerhetstekniker">
+<meta property="og:description" content="Etisk hacking, sårbarhetsanalys, nätverkssäkerhet och systemhärdning — tillämpat under handledd LIA och i kontrollerade labbmiljöer, och ordentligt dokumenterat.">
+<meta property="og:image" content="https://ghanemla.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Cybersäkerhet — Ghanem Lamloumi, IT-säkerhetstekniker">
+<meta name="twitter:description" content="Etisk hacking, sårbarhetsanalys, nätverkssäkerhet och systemhärdning — tillämpat under handledd LIA och i kontrollerade labbmiljöer, och ordentligt dokumenterat.">
+<meta name="twitter:image" content="https://ghanemla.github.io/assets/og-image.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/GL_logo.png">
+
+<script>
+/* Apply the saved theme and language before first paint — no flash. */
+(function () {
+  var el = document.documentElement;
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    el.setAttribute('data-theme', (savedTheme === 'light' || savedTheme === 'dark')
+      ? savedTheme
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+  } catch (e) {
+    el.setAttribute('data-theme', 'dark');
+  }
+  try {
+    var savedLang = localStorage.getItem('lang');
+    if (savedLang === 'en' || savedLang === 'sv') {
+      el.setAttribute('data-lang', savedLang);
+      el.setAttribute('lang', savedLang);
+    }
+  } catch (e) { /* Swedish stays the default */ }
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="path-sec">
+<a class="skip-link" href="#main"><span lang="sv">Hoppa till innehåll</span><span lang="en">Skip to content</span></a>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Huvudmeny" data-aria-en="Main">
+    <a class="nav__brand" href="/">Ghanem Lamloumi</a>
+
+    <div class="nav__group">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="/development/"><span lang="sv">Utveckling</span><span lang="en">Development</span></a></li>
+        <li><a class="nav__link" href="/cybersecurity/" aria-current="page"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a></li>
+        <li><a class="nav__link" href="/#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a></li>
+        <li><a class="nav__link" href="/#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a></li>
+      </ul>
+
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Byt till engelska">
+        <span class="lang-toggle__opt lang-toggle__opt--sv" aria-hidden="true">SV</span>
+        <span class="lang-toggle__opt lang-toggle__opt--en" aria-hidden="true">EN</span>
+      </button>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="visually-hidden"><span lang="sv">Ljust tema</span><span lang="en">Light theme</span></span>
+        <span class="theme-toggle__opt theme-toggle__opt--dark" aria-hidden="true">☾</span>
+        <span class="theme-toggle__opt theme-toggle__opt--light" aria-hidden="true">☀</span>
+      </button>
+
+      <div class="menu menu--desktop">
+        <button class="menu__button" type="button" data-menu-button aria-expanded="false" aria-controls="cv-menu">
+          CV <span class="menu__caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="menu__list" id="cv-menu" data-menu-panel hidden>
+          <p class="menu__group"><span lang="sv">Utvecklare</span><span lang="en">Developer</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+          <p class="menu__group"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
+        </div>
+      </div>
+
+      <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+        <span class="visually-hidden"><span lang="sv">Meny</span><span lang="en">Menu</span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container nav__mobile" id="mobile-nav" data-nav-panel hidden>
+    <a href="/development/"><span lang="sv">Utveckling</span><span lang="en">Development</span></a>
+    <a href="/cybersecurity/" aria-current="page"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a>
+    <a href="/#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a>
+    <a href="/#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a>
+    <span class="nav__mobile-label">CV</span>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ---------------- Page hero ---------------- -->
+  <section class="container page-hero">
+    <p class="label label--sec"><span lang="sv">02 / Cybersäkerhet</span><span lang="en">02 / Cybersecurity</span></p>
+    <h1 class="page-hero__title"><span lang="sv">IT-säkerhetstekniker</span><span lang="en">IT Security Technician</span></h1>
+    <p class="page-hero__lede"><span lang="sv">Yrkeshögskoleexamen (440 YH-poäng) med inriktning mot etisk hacking, sårbarhetsanalys, nätverkssäkerhet och systemhärdning — tillämpat under handledd LIA och i kontrollerade labbmiljöer, och ordentligt dokumenterat. Varje post nedan är märkt med exakt vad den var.</span><span lang="en">Higher Vocational Education diploma (440 YH points) with a focus on ethical hacking, vulnerability analysis, network security and system hardening — practised in supervised internships and controlled labs, and documented properly. Every entry below is labelled with exactly what it was.</span></p>
+
+    <div class="page-hero__actions" lang="sv">
+      <a class="btn btn--sec" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf">Cybersäkerhets-CV — svenska (PDF)</a>
+      <a class="btn btn--outline" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf">English (PDF)</a>
+    </div>
+    <div class="page-hero__actions" lang="en">
+      <a class="btn btn--sec" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf">Cybersecurity CV — English (PDF)</a>
+      <a class="btn btn--outline" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf">Svenska (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ---------------- Qualification ---------------- -->
+  <section class="container section" aria-labelledby="qualification">
+    <h2 class="label section__label" id="qualification"><span lang="sv">Kvalifikation</span><span lang="en">Qualification</span></h2>
+
+    <div class="card qualification">
+      <div>
+        <div class="sec-entry__head">
+          <h3 class="qualification__title"><span lang="sv">IT-säkerhetstekniker — Etisk hackare</span><span lang="en">IT Security Technician — Ethical Hacker</span></h3>
+          <span class="badge badge--sec"><span lang="sv">Formell utbildning</span><span lang="en">Formal education</span></span>
+        </div>
+        <p class="sec-entry__body"><span lang="sv">Edugrade · Yrkeshögskoleexamen · 440 YH-poäng · 2019–2021. Etisk hacking, penetrationstestning, nätverkssäkerhet, administration och härdning av Linux och Windows, virtualisering, Python, IPS/IDS och molnsäkerhet — inklusive två handledda LIA-perioder (100 YH-poäng).</span><span lang="en">Edugrade · Higher Vocational Education Diploma · 440 YH points · 2019–2021. Ethical hacking, penetration testing, network security, Linux &amp; Windows administration and hardening, virtualisation, Python, IPS/IDS and cloud security — including two supervised internship periods (100 YH points).</span></p>
+      </div>
+      <div class="specs specs--aside">
+        <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">examen</span><span lang="en">diploma</span></span><span>2021 · SeQF 5</span></div>
+        <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">omfattning</span><span lang="en">scope</span></span><span><span lang="sv">440 YH-poäng</span><span lang="en">440 YH points</span></span></div>
+        <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">praktik</span><span lang="en">practice</span></span><span><span lang="sv">2 LIA-perioder · labbar</span><span lang="en">2 internships · labs</span></span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- Practical training ---------------- -->
+  <section class="container section--tight" aria-labelledby="practical-training">
+    <h2 class="label section__label" id="practical-training"><span lang="sv">Praktik &amp; labberfarenhet</span><span lang="en">Practical training &amp; lab experience</span></h2>
+
+    <article class="card sec-entry">
+      <div class="sec-entry__head">
+        <h3 class="sec-entry__title"><span lang="sv">LIA 1 &amp; 2 — IT-säkerhet, Edugrade</span><span lang="en">Internships 1 &amp; 2 — IT security, Edugrade</span></h3>
+        <span class="badge badge--sec"><span lang="sv">Handledd LIA · 100 YH</span><span lang="en">Supervised internship · 100 YH</span></span>
+      </div>
+      <p class="sec-entry__body"><span lang="sv">Handledda individuella och gruppbaserade uppgifter i skolans server- och nätverksmiljö: penetrationstestning, sårbarhetsanalys och Linux-härdning i kontrollerade miljöer. Satte upp en Linuxserver med DNS och backup-DNS samt webb-, FTP- och e-posttjänster — och dokumenterade arbetsflöden och tekniska fynd genomgående.</span><span lang="en">Supervised individual and group assignments in the school&#8217;s server and network environment: penetration testing, vulnerability analysis and Linux hardening in controlled settings. Built a Linux server with DNS and backup DNS plus web, FTP and email services — documenting workflows and technical findings throughout.</span></p>
+    </article>
+
+    <article class="card sec-entry">
+      <div class="sec-entry__head">
+        <h3 class="sec-entry__title"><span lang="sv">Penetrationstestning — praktiska labbar</span><span lang="en">Penetration-testing labs</span></h3>
+        <span class="badge badge--sec"><span lang="sv">Kontrollerad labbmiljö · Hack The Box</span><span lang="en">Controlled lab · Hack The Box</span></span>
+      </div>
+      <p class="sec-entry__body"><span lang="sv">Full metodik tillämpad från början till slut på lagliga labbmål: informationsinsamling och enumeration med Nmap (portar, protokoll, operativsystem och tjänsteidentifiering), webbtestning med Gobuster, Nikto, Burp Suite och SQLmap, exploatering och privilege escalation i Linux och Windows med Metasploit och manuella metoder, samt trafikanalys i Wireshark.</span><span lang="en">Full methodology practised end to end on legal lab targets: reconnaissance and enumeration with Nmap (ports, protocols, OS and service identification), web testing with Gobuster, Nikto, Burp Suite and SQLmap, exploitation and privilege escalation on Linux and Windows with Metasploit and manual techniques, and traffic analysis in Wireshark.</span></p>
+      <div class="chips chips--spaced">
+        <span class="chip">Nmap</span>
+        <span class="chip">Gobuster</span>
+        <span class="chip">Nikto</span>
+        <span class="chip">Burp Suite</span>
+        <span class="chip">SQLmap</span>
+        <span class="chip">Metasploit</span>
+        <span class="chip">Wireshark</span>
+        <span class="chip">Searchsploit</span>
+      </div>
+    </article>
+
+    <!-- Case study -->
+    <article class="card card--accent-sec sec-entry">
+      <div class="sec-entry__head">
+        <h3 class="sec-entry__title"><span lang="sv">Fallstudie — Linux-härdning &amp; säker servermiljö</span><span lang="en">Case study — Linux hardening &amp; secure server environment</span></h3>
+        <span class="badge badge--sec"><span lang="sv">Teamprojekt</span><span lang="en">Team project</span></span>
+      </div>
+
+      <figure class="diagram">
+        <figcaption class="diagram__caption"><span lang="sv">Serverarkitektur — endast verifierade komponenter</span><span lang="en">Server architecture — verified components only</span></figcaption>
+        <div class="diagram__flow">
+          <div class="diagram__node diagram__node--clients">
+            <span lang="sv">KLIENTER</span><span lang="en">CLIENTS</span><br><small>HTTPS · SSH<br>SFTP</small>
+          </div>
+          <div class="diagram__arrow" aria-hidden="true"><span>→</span></div>
+          <div class="diagram__node diagram__node--firewall">
+            <span lang="sv">UFW-BRANDVÄGG</span><span lang="en">UFW FIREWALL</span><br><small><span lang="sv">endast tillåtna<br>portar</span><span lang="en">allow-listed<br>ports only</span></small>
+          </div>
+          <div class="diagram__arrow" aria-hidden="true"><span>→</span></div>
+          <div class="diagram__server">
+            <p class="diagram__server-label"><span lang="sv">Debian-server</span><span lang="en">Debian server</span></p>
+            <div class="diagram__cols">
+              <div class="diagram__col">
+                <span class="diagram__col-title"><span lang="sv">ÅTKOMST</span><span lang="en">ACCESS</span></span><br>
+                <span lang="sv">PAM-lösenordspolicy<br>Inloggning med SSH-nyckel<br>Fail2Ban</span><span lang="en">PAM password policy<br>SSH key-only login<br>Fail2Ban</span>
+              </div>
+              <div class="diagram__col">
+                <span class="diagram__col-title"><span lang="sv">WEBB · HTTPS</span><span lang="en">WEB · HTTPS</span></span><br>
+                Apache + PHP<br>WordPress · phpMyAdmin<br>MariaDB
+              </div>
+              <div class="diagram__col">
+                <span class="diagram__col-title"><span lang="sv">FILÖVERFÖRING</span><span lang="en">FILE TRANSFER</span></span><br>
+                <span lang="sv">Endast SFTP<br>chroot-jails<br>dedikerade grupper</span><span lang="en">SFTP only<br>chroot jails<br>dedicated groups</span>
+              </div>
+            </div>
+            <p class="diagram__foot"><span lang="sv">Minsta privilegium för varje konto och grupp</span><span lang="en">Least-privilege permissions for every account and group</span></p>
+          </div>
+        </div>
+      </figure>
+
+      <div class="case-split">
+        <div>
+          <p class="sec-entry__body"><span lang="sv">Härdade en Debianbaserad server hela vägen som team: separata användarkonton med PAM-krav på lösenord, brandväggsregler i UFW, nyckelbaserad SSH och Fail2Ban mot brute force. Driftsatte Apache, PHP, MariaDB, phpMyAdmin och WordPress över HTTPS, och begränsade filöverföring till SFTP med dedikerade grupper, chroot-jails och minsta privilegium.</span><span lang="en">Hardened a Debian-based server end to end as a team: separate user accounts with PAM password requirements, UFW firewall rules, key-based SSH and Fail2Ban against brute force. Deployed Apache, PHP, MariaDB, phpMyAdmin and WordPress over HTTPS, and restricted file transfer to SFTP with dedicated groups, chroot jails and least-privilege permissions.</span></p>
+          <p class="sec-entry__body"><span lang="sv">Resultatet: en fungerande webbstack där varje tjänst kör med exakt den åtkomst den behöver — och inget mer.</span><span lang="en">The result: a functioning full web stack where every service runs with exactly the access it needs — and nothing more.</span></p>
+        </div>
+        <div class="specs specs--aside">
+          <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">åtkomst</span><span lang="en">access</span></span><span><span lang="sv">PAM · SSH-nycklar · Fail2Ban</span><span lang="en">PAM · SSH keys · Fail2Ban</span></span></div>
+          <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">nätverk</span><span lang="en">network</span></span><span>UFW · HTTPS/SSL</span></div>
+          <div class="specs__row"><span class="specs__key specs__key--wide">stack</span><span>Apache · PHP · MariaDB · WP</span></div>
+          <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">filer</span><span lang="en">files</span></span><span><span lang="sv">SFTP · grupper · chroot</span><span lang="en">SFTP · groups · chroot</span></span></div>
+          <div class="specs__row"><span class="specs__key specs__key--wide"><span lang="sv">princip</span><span lang="en">principle</span></span><span><span lang="sv">minsta privilegium</span><span lang="en">least privilege</span></span></div>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <!-- ---------------- Toolset ---------------- -->
+  <section class="container section--tight" aria-labelledby="toolset">
+    <h2 class="label section__label" id="toolset"><span lang="sv">Verktyg — var varje verktyg använts</span><span lang="en">Toolset — where each tool was used</span></h2>
+
+    <div class="tool-grid">
+      <article class="card card--flat tool-card">
+        <h3 class="tool-card__label"><span lang="sv">Informationsinsamling &amp; enumeration</span><span lang="en">Recon &amp; enumeration</span></h3>
+        <p class="tool-card__list">Nmap · Gobuster · Searchsploit</p>
+        <p class="tool-card__where"><span lang="sv">Kartläggning av mål i HTB-labbar och LIA-uppgifter</span><span lang="en">Target mapping in HTB labs and internship assignments</span></p>
+      </article>
+
+      <article class="card card--flat tool-card">
+        <h3 class="tool-card__label"><span lang="sv">Webbsäkerhetstestning</span><span lang="en">Web-security testing</span></h3>
+        <p class="tool-card__list">Burp Suite · Nikto · SQLmap</p>
+        <p class="tool-card__where"><span lang="sv">Sökvägsupptäckt och sårbarhetstestning i kontrollerade labbmiljöer</span><span lang="en">Path discovery and vulnerability testing in controlled labs</span></p>
+      </article>
+
+      <article class="card card--flat tool-card">
+        <h3 class="tool-card__label"><span lang="sv">Exploatering &amp; analys</span><span lang="en">Exploitation &amp; analysis</span></h3>
+        <p class="tool-card__list">Metasploit · Wireshark</p>
+        <p class="tool-card__where"><span lang="sv">Övad exploatering och privilege escalation mot labbmål; trafikanalys</span><span lang="en">Exploitation practice and privesc on lab targets; traffic analysis</span></p>
+      </article>
+
+      <article class="card card--flat tool-card">
+        <h3 class="tool-card__label"><span lang="sv">System &amp; härdning</span><span lang="en">Systems &amp; hardening</span></h3>
+        <p class="tool-card__list">Linux · Windows · UFW · PAM · SSH · Fail2Ban · DNS · TCP/IP</p>
+        <p class="tool-card__where"><span lang="sv">Serveruppsättning och härdning under LIA och i teamprojektet</span><span lang="en">Server builds and hardening in internships and the team project</span></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ---------------- Context notes ---------------- -->
+  <section class="container section--tight note-grid" aria-label="Sammanhang" data-aria-en="Context">
+    <article class="card card--flat card--accent-dev note">
+      <div class="note__head">
+        <h2 class="label"><span lang="sv">Säker utveckling</span><span lang="en">Security-aware development</span></h2>
+        <span class="badge"><span lang="sv">Utvecklingserfarenhet</span><span lang="en">Development experience</span></span>
+      </div>
+      <p class="note__body"><span lang="sv">Jag har byggt det jag testar: autentisering med JWT/NextAuth, bcrypt-hashning, API-routes och databaser. SQL-injektion, XSS, CSRF och bristande behörighetskontroll är risker jag förstår från byggarens sida — och jag vet att ett autentiseringsbibliotek i sig inte gör en applikation säker.</span><span lang="en">I&#8217;ve built what I test: JWT/NextAuth authentication, bcrypt hashing, API routes and databases. SQL injection, XSS, CSRF and broken access control are risks I understand from the builder&#8217;s side — and I know an auth library alone doesn&#8217;t make an application secure.</span></p>
+    </article>
+
+    <article class="card card--flat note">
+      <div class="note__head">
+        <h2 class="label"><span lang="sv">Håller mig uppdaterad</span><span lang="en">Keeping current</span></h2>
+        <span class="badge"><span lang="sv">Självstudier</span><span lang="en">Independent learning</span></span>
+      </div>
+      <p class="note__body"><span lang="sv">Löpande labbträning på Hack The Box och strukturerade självstudier i Python och säkerhetsgrunder. Ingen yrkeserfarenhet inom säkerhet påstås — målet med den här sidan är ett första juniort jobb.</span><span lang="en">Ongoing lab practice on Hack The Box and structured self-study in Python and security fundamentals. No professional security employment is claimed — the goal of this page is a first junior role.</span></p>
+    </article>
+  </section>
+
+  <!-- ---------------- CTA ---------------- -->
+  <section class="container section--tight">
+    <div class="card cta-panel">
+      <p class="cta-panel__title"><span lang="sv">Söker du en junior IT-säkerhetstekniker, sårbarhetsanalytiker eller en tekniker med säkerhetstänk?</span><span lang="en">Looking for a junior IT-security technician, vulnerability analyst or security-minded technical professional?</span></p>
+      <div class="cta-panel__actions">
+        <a class="btn btn--neutral" href="mailto:ghanem.lamloumi1@gmail.com"><span lang="sv">Mejla mig</span><span lang="en">Email me</span></a>
+        <a class="btn btn--outline" href="/development/"><span lang="sv">Utvecklingsprofil →</span><span lang="en">Development profile →</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 Ghanem Lamloumi</span>
+    <span><span lang="sv">Utveckling · Cybersäkerhet · CV</span><span lang="en">Development · Cybersecurity · CV</span></span>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>

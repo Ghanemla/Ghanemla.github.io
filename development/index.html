@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="sv" data-lang="sv" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-en="Development — Ghanem Lamloumi, junior full-stack developer">Utveckling — Ghanem Lamloumi, junior fullstackutvecklare</title>
+<meta name="description"
+      content="Junior fullstackutvecklare i Sverige: React, TypeScript, Node.js och PHP. Självständiga skrivbords- och webbprodukter, sex månaders LIA och yrkeshögskoleexamen från Chas Academy."
+      data-en="Junior full-stack developer in Sweden: React, TypeScript, Node.js and PHP. Independent desktop and web products, a six-month internship, and a Higher Vocational Education diploma from Chas Academy.">
+<link rel="canonical" href="https://ghanemla.github.io/development/">
+
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Ghanem Lamloumi">
+<meta property="og:url" content="https://ghanemla.github.io/development/">
+<meta property="og:title" content="Utveckling — Ghanem Lamloumi, junior fullstackutvecklare">
+<meta property="og:description" content="React, TypeScript, Node.js och PHP. Självständiga produkter byggda hela vägen, plus sex månader med ett seniort team.">
+<meta property="og:image" content="https://ghanemla.github.io/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Utveckling — Ghanem Lamloumi, junior fullstackutvecklare">
+<meta name="twitter:description" content="React, TypeScript, Node.js och PHP. Självständiga produkter byggda hela vägen, plus sex månader med ett seniort team.">
+<meta name="twitter:image" content="https://ghanemla.github.io/assets/og-image.png">
+
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/GL_logo.png">
+
+<script>
+/* Apply the saved theme and language before first paint — no flash. */
+(function () {
+  var el = document.documentElement;
+  try {
+    var savedTheme = localStorage.getItem('theme');
+    el.setAttribute('data-theme', (savedTheme === 'light' || savedTheme === 'dark')
+      ? savedTheme
+      : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'));
+  } catch (e) {
+    el.setAttribute('data-theme', 'dark');
+  }
+  try {
+    var savedLang = localStorage.getItem('lang');
+    if (savedLang === 'en' || savedLang === 'sv') {
+      el.setAttribute('data-lang', savedLang);
+      el.setAttribute('lang', savedLang);
+    }
+  } catch (e) { /* Swedish stays the default */ }
+})();
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body class="path-dev">
+<a class="skip-link" href="#main"><span lang="sv">Hoppa till innehåll</span><span lang="en">Skip to content</span></a>
+
+<header class="site-header">
+  <nav class="container nav" aria-label="Huvudmeny" data-aria-en="Main">
+    <a class="nav__brand" href="/">Ghanem Lamloumi</a>
+
+    <div class="nav__group">
+      <ul class="nav__links">
+        <li><a class="nav__link" href="/development/" aria-current="page"><span lang="sv">Utveckling</span><span lang="en">Development</span></a></li>
+        <li><a class="nav__link" href="/cybersecurity/"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a></li>
+        <li><a class="nav__link" href="/#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a></li>
+        <li><a class="nav__link" href="/#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a></li>
+      </ul>
+
+      <button class="lang-toggle" type="button" data-lang-toggle aria-label="Byt till engelska">
+        <span class="lang-toggle__opt lang-toggle__opt--sv" aria-hidden="true">SV</span>
+        <span class="lang-toggle__opt lang-toggle__opt--en" aria-hidden="true">EN</span>
+      </button>
+
+      <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false">
+        <span class="visually-hidden"><span lang="sv">Ljust tema</span><span lang="en">Light theme</span></span>
+        <span class="theme-toggle__opt theme-toggle__opt--dark" aria-hidden="true">☾</span>
+        <span class="theme-toggle__opt theme-toggle__opt--light" aria-hidden="true">☀</span>
+      </button>
+
+      <div class="menu menu--desktop">
+        <button class="menu__button" type="button" data-menu-button aria-expanded="false" aria-controls="cv-menu">
+          CV <span class="menu__caret" aria-hidden="true">▾</span>
+        </button>
+        <div class="menu__list" id="cv-menu" data-menu-panel hidden>
+          <p class="menu__group"><span lang="sv">Utvecklare</span><span lang="en">Developer</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+          <p class="menu__group"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></p>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+          <a class="menu__item" href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
+        </div>
+      </div>
+
+      <button class="nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobile-nav">
+        <span class="visually-hidden"><span lang="sv">Meny</span><span lang="en">Menu</span></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <div class="container nav__mobile" id="mobile-nav" data-nav-panel hidden>
+    <a href="/development/" aria-current="page"><span lang="sv">Utveckling</span><span lang="en">Development</span></a>
+    <a href="/cybersecurity/"><span lang="sv">Cybersäkerhet</span><span lang="en">Cybersecurity</span></a>
+    <a href="/#education"><span lang="sv">Utbildning</span><span lang="en">Education</span></a>
+    <a href="/#contact"><span lang="sv">Kontakt</span><span lang="en">Contact</span></a>
+    <span class="nav__mobile-label">CV</span>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf"><span lang="sv">Utvecklar-CV — svenska (PDF)</span><span lang="en">Developer CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf"><span lang="sv">Utvecklar-CV — engelska (PDF)</span><span lang="en">Developer CV — English (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-sv.pdf"><span lang="sv">Cybersäkerhets-CV — svenska (PDF)</span><span lang="en">Cybersecurity CV — Swedish (PDF)</span></a>
+    <a href="/assets/cv/ghanem-lamloumi-cybersecurity-cv-en.pdf"><span lang="sv">Cybersäkerhets-CV — engelska (PDF)</span><span lang="en">Cybersecurity CV — English (PDF)</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ---------------- Page hero ---------------- -->
+  <section class="container page-hero">
+    <p class="label label--dev"><span lang="sv">01 / Mjukvaruutveckling</span><span lang="en">01 / Software development</span></p>
+    <h1 class="page-hero__title"><span lang="sv">Junior fullstackutvecklare</span><span lang="en">Junior full-stack developer</span></h1>
+    <p class="page-hero__lede"><span lang="sv">Starkast i React och TypeScript, med praktisk backend-erfarenhet av Node.js och PHP. Jag tar produkter från idé till driftsättning på egen hand, och har arbetat sex månader tillsammans med en UX-designer och en senior utvecklare.</span><span lang="en">Strongest in React and TypeScript, with working backend experience in Node.js and PHP. I take products from idea to deployment on my own, and I&#8217;ve spent six months embedded with a UX designer and senior developer.</span></p>
+
+    <div class="page-hero__actions" lang="sv">
+      <a class="btn btn--dev" href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf">Utvecklar-CV — svenska (PDF)</a>
+      <a class="btn btn--outline" href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf">English (PDF)</a>
+    </div>
+    <div class="page-hero__actions" lang="en">
+      <a class="btn btn--dev" href="/assets/cv/ghanem-lamloumi-developer-cv-en.pdf">Developer CV — English (PDF)</a>
+      <a class="btn btn--outline" href="/assets/cv/ghanem-lamloumi-developer-cv-sv.pdf">Svenska (PDF)</a>
+    </div>
+  </section>
+
+  <!-- ---------------- Featured projects ---------------- -->
+  <section class="container section" aria-labelledby="featured-projects">
+    <h2 class="label section__label" id="featured-projects"><span lang="sv">Utvalda projekt</span><span lang="en">Featured projects</span></h2>
+
+    <!-- Nebula -->
+    <article class="card project">
+      <div class="cover cover--lg">
+        <span class="cover__name">Nebula</span>
+        <span class="cover__rule"></span>
+        <span class="cover__meta"><span lang="sv">Local-first anteckningar · Electron · CodeMirror 6 · three.js</span><span lang="en">Local-first notes · Electron · CodeMirror 6 · three.js</span></span>
+      </div>
+      <div class="project__split">
+        <div>
+          <div class="project__head">
+            <h3 class="project__title">Nebula</h3>
+            <span class="badge badge--dev"><span lang="sv">Självständigt projekt</span><span lang="en">Independent project</span></span>
+          </div>
+          <p class="project__body"><span lang="sv">En local-first markdown-app för dig som vill äga dina egna filer. Live-syntaxmarkering med CodeMirror 6, en 3D-&#8221;galax&#8221; över länkade anteckningar och röstanteckningar som transkriberas lokalt med Whisper — inget moln, inget konto. Paketerad som en installerbar skrivbordsapplikation.</span><span lang="en">A local-first markdown note app for people who want to own their files. Live syntax highlighting with CodeMirror 6, a 3D &#8220;galaxy&#8221; graph of linked notes, and voice notes transcribed on-device with Whisper — no cloud, no account. Packaged as an installable desktop application.</span></p>
+          <p class="project__body"><span lang="sv">Byggd helt själv: arkitektur, editorintegration, 3D-rendering, paketering och release-pipeline.</span><span lang="en">Built alone: architecture, editor integration, 3D rendering, packaging and release pipeline.</span></p>
+        </div>
+        <div class="specs specs--aside">
+          <div class="specs__row"><span class="specs__key">stack</span><span>Electron · CodeMirror 6 · three.js</span></div>
+          <div class="specs__row"><span class="specs__key">ai</span><span><span lang="sv">transformers.js (Whisper lokalt)</span><span lang="en">transformers.js (on-device Whisper)</span></span></div>
+          <div class="specs__row"><span class="specs__key"><span lang="sv">roll</span><span lang="en">role</span></span><span><span lang="sv">solo — koncept till installationsfiler</span><span lang="en">solo — concept to installers</span></span></div>
+          <div class="specs__row"><span class="specs__key">status</span><span>v1.1</span></div>
+          <div class="specs__row"><span class="specs__key"><span lang="sv">länkar</span><span lang="en">links</span></span><span><a class="link--mono" href="https://github.com/Ghanemla/Nebula" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a></span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Vanta -->
+    <article class="card project project--side">
+      <div class="cover">
+        <span class="cover__name">Vanta</span>
+        <span class="cover__rule"></span>
+        <span class="cover__meta"><span lang="sv">Skrivbordsapp<br>Tauri · React · FastAPI</span><span lang="en">Desktop app<br>Tauri · React · FastAPI</span></span>
+      </div>
+      <div class="project__pane">
+        <div class="project__head">
+          <h3 class="project__title">Vanta</h3>
+          <span class="badge badge--dev"><span lang="sv">Självständigt projekt</span><span lang="en">Independent project</span></span>
+        </div>
+        <p class="project__body"><span lang="sv">En helt lokal skrivbordsstudio för egna AI-karaktärer: bildgenerering, inpainting, uppskalning, bild-till-video och LoRA-träning på den egna datorn — inget konto, ingen telemetri.</span><span lang="en">A local-only desktop studio for original AI characters: on-device image generation, inpainting, upscaling, image-to-video and LoRA training — no account, no telemetry, everything on the user&#8217;s machine.</span></p>
+        <p class="project__body"><span lang="sv">Tauri 2 + React-renderare över en typad, autentiserad FastAPI-orkestrator med versionerade SQLite-migrationer och automatiserade tester på båda sidor.</span><span lang="en">Tauri 2 + React renderer over a typed, authenticated FastAPI orchestrator with versioned SQLite migrations and automated tests on both sides.</span></p>
+        <div class="specs specs--inline">
+          <div class="specs__row"><span class="specs__key">stack</span><span>Tauri 2 · React · TypeScript · FastAPI · SQLite</span></div>
+          <div class="specs__row"><span class="specs__key"><span lang="sv">roll</span><span lang="en">role</span></span><span><span lang="sv">solo — arkitektur till installationsfil</span><span lang="en">solo — architecture to installer</span></span></div>
+          <div class="specs__row"><span class="specs__key"><span lang="sv">länkar</span><span lang="en">links</span></span><span><a class="link--mono" href="https://github.com/Ghanemla/Vanta" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a></span></div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Postbox + Nimbus -->
+    <div class="project-pair">
+      <article class="card project">
+        <div class="cover cover--md">
+          <span class="cover__name">Postbox</span>
+          <span class="cover__rule"></span>
+          <span class="cover__meta"><span lang="sv">Social plattform · Next.js · Prisma</span><span lang="en">Social platform · Next.js · Prisma</span></span>
+        </div>
+        <div class="project__pane">
+          <div class="project__head">
+            <h3 class="project__title">Postbox</h3>
+            <span class="badge badge--dev"><span lang="sv">Examensprojekt · solo</span><span lang="en">Final project · solo</span></span>
+          </div>
+          <p class="project__body"><span lang="sv">Social plattform — inlägg, delning och interaktion i realtid. Ansvarade för hela stacken: datamodell, autentisering med NextAuth, skyddade API-routes, live-uppdateringar med Pusher och bildhantering med Cloudinary.</span><span lang="en">Social platform — posts, sharing and real-time interaction. Owned the full stack: data model, NextAuth authentication, protected API routes, Pusher live updates, Cloudinary image handling.</span></p>
+          <p class="tech-line">
+            Next.js 13 · TypeScript · Prisma · NextAuth · Pusher · Tailwind<br>
+            <a class="link--mono" href="https://github.com/Ghanemla/postbox" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a>
+          </p>
+        </div>
+      </article>
+
+      <article class="card project">
+        <div class="cover cover--md">
+          <span class="cover__name">Nimbus</span>
+          <span class="cover__rule"></span>
+          <span class="cover__meta"><span lang="sv">Realtidschatt · React · WebSockets</span><span lang="en">Real-time chat · React · WebSockets</span></span>
+        </div>
+        <div class="project__pane">
+          <div class="project__head">
+            <h3 class="project__title">Nimbus</h3>
+            <span class="badge badge--dev"><span lang="sv">Självständigt projekt</span><span lang="en">Independent project</span></span>
+          </div>
+          <p class="project__body"><span lang="sv">Realtidschatt med JWT-autentisering, bcrypt-hashning, meddelandelagring, användarnärvaro, automatisk återanslutning och filuppladdning — WebSockets över en Express-backend.</span><span lang="en">Real-time chat with JWT authentication, bcrypt hashing, message persistence, presence, automatic reconnection and file uploads — WebSockets over an Express backend.</span></p>
+          <p class="tech-line">
+            React · Vite · Express · Mongoose · ws · JWT · bcrypt<br>
+            <a class="link--mono" href="https://github.com/Ghanemla/Nimbus-fe" target="_blank" rel="noopener">frontend ↗</a>
+            ·
+            <a class="link--mono" href="https://github.com/Ghanemla/Nimbus-be" target="_blank" rel="noopener">backend ↗</a>
+          </p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Supporting projects -->
+    <div class="support-grid">
+      <article class="card card--flat support-card">
+        <div class="support-card__head">
+          <h3 class="support-card__title"><span lang="sv">Gamifierad fitnessapp</span><span lang="en">Gamified fitness app</span></h3>
+          <span class="badge"><span lang="sv">LIA · medutvecklare</span><span lang="en">Internship · co-dev</span></span>
+        </div>
+        <p class="support-card__desc"><span lang="sv">Vane- och träningsapp där verkliga aktiviteter nivåhöjer en spelkaraktär. React Native · Expo · Redux · SQLite.</span><span lang="en">Habit/workout app where real activities level up a character. React Native · Expo · Redux · SQLite.</span></p>
+        <p class="support-card__links"><a class="link--mono" href="https://github.com/Ghanemla/native_fitness" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a></p>
+      </article>
+
+      <article class="card card--flat support-card">
+        <div class="support-card__head">
+          <h3 class="support-card__title"><span lang="sv">Twitch AI-chattbot</span><span lang="en">Twitch AI chatbot</span></h3>
+          <span class="badge"><span lang="sv">Självständigt</span><span lang="en">Independent</span></span>
+        </div>
+        <p class="support-card__desc"><span lang="sv">Lokala AI-svar i chatten med text-till-tal för Twitch. Python · twitchio · Ollama.</span><span lang="en">Local AI chat responses with text-to-speech for Twitch. Python · twitchio · Ollama.</span></p>
+        <p class="support-card__links"><a class="link--mono" href="https://github.com/Ghanemla/Twitch-chatbot" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a></p>
+      </article>
+
+      <article class="card card--flat support-card">
+        <div class="support-card__head">
+          <h3 class="support-card__title">Chat Labs</h3>
+          <span class="badge"><span lang="sv">Teamprojekt</span><span lang="en">Team project</span></span>
+        </div>
+        <p class="support-card__desc"><span lang="sv">AI-tjänst för NPC-dialog till spelutvecklare, byggd med ett skolteam. React · Express · MongoDB.</span><span lang="en">AI NPC-dialogue service for game developers, built with a school team. React · Express · MongoDB.</span></p>
+        <p class="support-card__links"><a class="link--mono" href="https://github.com/zamero/QuestQuillAI" target="_blank" rel="noopener"><span lang="sv">repo ↗</span><span lang="en">repository ↗</span></a></p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ---------------- Experience & skills ---------------- -->
+  <section class="container two-col">
+    <div>
+      <h2 class="label"><span lang="sv">Erfarenhet</span><span lang="en">Experience</span></h2>
+      <div class="entry">
+        <div class="entry__head">
+          <h3 class="entry__title"><span lang="sv">LIA — Fullstackutvecklare, CHAS Stockholm</span><span lang="en">Internship — Full-Stack Developer, CHAS Stockholm</span></h3>
+          <span class="badge"><span lang="sv">LIA</span><span lang="en">Internship</span></span>
+        </div>
+        <p class="entry__meta"><span lang="sv">Okt 2023 – apr 2024 · på plats</span><span lang="en">Oct 2023 – Apr 2024 · on-site</span></p>
+        <p class="entry__body"><span lang="sv">Arbetade tillsammans med en UX-designer, senior utvecklare och handledare. Medutvecklade fitnessappen i React Native/Expo och deltog i ombyggnaden av en WordPress-webbplats med PHP, JavaScript och CSS. Iterativ leverans med Kanban.</span><span lang="en">Worked alongside a UX designer, senior developer and supervisor. Co-developed the fitness app in React Native/Expo and contributed to rebuilding a WordPress site with PHP, JavaScript and CSS. Iterative delivery with Kanban.</span></p>
+      </div>
+    </div>
+
+    <div>
+      <h2 class="label"><span lang="sv">Kompetens</span><span lang="en">Skills</span></h2>
+      <div class="skill-grid">
+        <div>
+          <p class="skill-grid__label">FRONTEND</p>
+          <p class="skill-grid__value">React · TypeScript · Next.js · Tailwind · Vite</p>
+        </div>
+        <div>
+          <p class="skill-grid__label">BACKEND</p>
+          <p class="skill-grid__value">Node.js · Express · PHP · Laravel · REST · JWT</p>
+        </div>
+        <div>
+          <p class="skill-grid__label">DATA</p>
+          <p class="skill-grid__value">MongoDB · MySQL · MariaDB · Prisma · SQLite</p>
+        </div>
+        <div>
+          <p class="skill-grid__label"><span lang="sv">MOBIL &amp; ARBETSSÄTT</span><span lang="en">MOBILE &amp; WORKFLOW</span></p>
+          <p class="skill-grid__value">React Native · Expo · Git · Kanban · Vercel</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ---------------- CTA ---------------- -->
+  <section class="container">
+    <div class="card cta-panel">
+      <p class="cta-panel__title"><span lang="sv">Söker du en junior fullstack- eller frontendutvecklare?</span><span lang="en">Looking for a junior full-stack or frontend developer?</span></p>
+      <div class="cta-panel__actions">
+        <a class="btn btn--neutral" href="mailto:ghanem.lamloumi1@gmail.com"><span lang="sv">Mejla mig</span><span lang="en">Email me</span></a>
+        <a class="btn btn--outline" href="/cybersecurity/"><span lang="sv">Cybersäkerhetsprofil →</span><span lang="en">Cybersecurity profile →</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <span>© 2026 Ghanem Lamloumi</span>
+    <span><span lang="sv">Utveckling · Cybersäkerhet · CV</span><span lang="en">Development · Cybersecurity · CV</span></span>
+  </div>
+</footer>
+
+<script src="/main.js" defer></script>
+</body>
+</html>
